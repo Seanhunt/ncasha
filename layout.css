@@ -1,0 +1,174 @@
+@charset "UTF-8";
+body {
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.125em;
+	background-color: #FFFFFF;
+	font-weight: lighter;
+}
+
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+ #container {
+	width: 48em;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #FFFFFF; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+ #header {
+	padding: 0;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	background-color: #FFFFFF;
+	background-image: url(images/logo_banner.jpg);
+	height: 184px;
+	background-repeat: no-repeat;
+} 
+ #header h1 {
+	margin-left: 175px;
+	padding: 2.15em 0 0 0;
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-size: 1.4em;
+	letter-spacing: normal;
+	font-variant: small-caps;
+	font-weight: lighter;
+}
+#navbar {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 0.75em;
+	background-color: #FFFFFF;
+	height: 3.15em;
+	margin-left: 175px;
+	font-variant: small-caps;
+	border-top-width: thick;
+	border-top-style: solid;
+	border-top-color: #CC0000;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+}
+ul.menu {
+	list-style-type:none;
+	width:auto;
+	position:relative;
+	display:block;
+	height:2.06em;
+	font-size:1em;
+	font-family:Georgia, Times New Roman, Times, serif;
+	border:1px solid #FFFFFF;
+	margin:0;
+	padding:0;
+	background-color: #FFFFFF;
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+ul.menu li {
+	display:block;
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+ul.menu li a {
+	float:left;
+	color:#000000;
+	text-decoration:none;
+	height:1.5em;
+	padding:0.56em 1.0em;
+	font-weight:normal;
+}
+
+ul.menu li a:hover,.current {
+	color:#FF0000;
+	background:url(images/bg.png) repeat-x top left;
+	text-decoration:none;
+}
+
+ul.menu .current a {
+	color:#FFFFFF;
+	font-weight:800;
+}
+
+
+/*RED*/
+ul.menu.red{
+	background-color:#B11718;
+}
+ul.menu.red li a:hover, .menu.red li.current {
+	background-color:#DE3330;
+}
+
+ #mainContent {
+	background-color: #FFFFFF;
+	background-image: url(images/17250_305295957619_305263322619_3621177_7786745_s.jpg);
+	background-repeat: no-repeat;
+	background-position:1.13em bottom;
+	font-size: 90%;
+	padding-top: 0;
+	padding-right: 3.13em;
+	padding-bottom: 0;
+	padding-left: 12.5em;
+}	
+#mainContent span {
+	font-weight: bold;
+}
+#mainContent h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.13em;
+	color: #FF0000;
+}
+a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #666666;
+	text-decoration: none;
+}
+a:visited {
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF0000;
+}
+a:active {
+	color: #CC0000;
+}
+ #footer {
+	padding: 0 0.63em 0 10.94em;
+	background-color: #FFFFFF;
+} 
+ #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 0.63em 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+	font-size: 0.56em;
+	color: #666666;
+}
+#dropshadow {
+	width: 51.25em;
+	margin-right: auto;
+	margin-left: auto;
+	background-repeat: repeat-y;
+	background-image: url(images/drop_white.jpg);
+}
+#p {
+}
+.style1     {
+	color: #CC0000;
+	font-weight: bold;
+	font-size: 110%;
+}
+#mainContent  ul li  strong {
+	font-style: italic;
+	font-weight: bold;
+}

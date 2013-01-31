@@ -1,0 +1,4 @@
+AddHandler server-parsed .shtml .html .htm
+<FilesMatch "\.html$">
+	Options -ExecCGI
+</FilesMatch>

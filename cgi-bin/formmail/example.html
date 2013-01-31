@@ -1,0 +1,19 @@
+<html>
+<body>
+<center>
+<form method='post' action='/cgi-bin/formmail/FormMail.pl'>
+Welcome to my test!<br />
+Make sure to edit this HTML to change your e-mail address where it says "PLACE E-MAIL HERE".<br />
+Please type a message, and then enter the verification code.
+<table border='0'>
+<tr><td>Message:</td><td><textarea name='message' rows='5' cols='30'></textarea></td><tr>
+<tr><td>Verification Code:<br />
+<img src='/cgi-bin/formmail/captcha.cgi'>
+</td><td><input type='text' name='verifytext'></td></tr>
+<tr><td colspan='2' align='center'><input type='submit' value='Send Message'></td></tr>
+</table>
+<input type="hidden" name="recipient" value="PLACE E-MAIL HERE">
+</form>
+</center>
+</body>
+</html>
